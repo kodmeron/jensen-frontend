@@ -1,26 +1,15 @@
-var username
-var password
+document.addEventListener("submit" , (event)=>{
+    console.log("Validating")
+    let user = document.getElementById("user").value;
+    let password = document.getElementById("password").value;
 
-document.addEventListener("submit", (event) => {
-    console.log("Submitted")
-    username = document.getElementById("username").value
-    password = document.getElementById("password").value
+    let request = new XMLHttpRequest();
+    request.open("POST", "http://localhost:3000/authorize");
+    //request.send(new FormData(formElement));
+    console.log("Validated")
 
-    const headers = new Headers()
-    headers.append("Accept", "application/json")
-    headers.append("Authorization", btoa(username + ":" + password))
-
-
-    fetch("http://localhost:3000/", { headers: headers }).then(function (response) {
-        if (response.ok) {
-            document.write("SUCCESSFULL LOGIN")
-        }
-        throw response;
-    }).then(function (data) {
-        console.log(data);
-    }).catch(function (error) {
-        console.warn(error);
-    })
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    request.send(`user=${user}&password=${password}`);
 
     event.preventDefault()
 })
