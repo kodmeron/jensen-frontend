@@ -3,7 +3,9 @@ body {
 }
 
 form {
-   
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-rows: 100px 50px 50px 25px 80px 100px 100px ;
     text-align: center;
     border: 2px solid rgb(0, 0, 0);
     margin: 0 auto;
@@ -11,9 +13,45 @@ form {
     
 }
 
+#tackIndien {
+grid-column-start: 2;
+grid-row-start: 1;
+}
+
+#username {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+#password {
+    grid-column-start: 2;
+grid-row-start: 3;
+}
+
+#submitBtn {
+    grid-column-start: 2;
+grid-row-start: 4;
+place-self: center;
+}
+
 #gSignIn {
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+    grid-column-start: 2;
+    grid-row-start: 5;
+    place-self: center;
+}
+
+#friendCap {
+    grid-column-start: 2;
+    grid-row-start: 6;
+    place-self: center;
+}
+
+.g-recaptcha {
+    grid-column-start: 2;
+    grid-row-start: 7;
+    place-self: center;
 }
 
 p {
