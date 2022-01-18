@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jensen frontend</title>
+    <script type="module" src="https://unpkg.com/friendly-challenge@0.9.0/widget.module.min.js" async defer></script>
+    <script nomodule src="https://unpkg.com/friendly-challenge@0.9.0/widget.min.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <meta name="google-signin-client_id" content="87614128961-0j0v2a1ul61i478kpbjrsbf48adh0bll.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
 </head>
 <body>
     <form>
+        <div class="frc-captcha" data-sitekey="FCMU1TFUA7B1R8FH"></div>
+        <div class="g-recaptcha" data-sitekey="6LcYjBoeAAAAADwnU7zYSnYz6JkfBiWon9IfIdH-"></div>
         <label>username</label>
         <input id="username" name="username" type="text">
         <label>password</label>
         <input id="password" type="password" name="password"></input>
         <input type="submit">
-        
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
     </form>
 
     <script src="app.js"></script>

@@ -1,8 +1,10 @@
 document.addEventListener("submit" , (event)=>{
     console.log("Validating")
-    let user = document.getElementById("user").value;
+    let user = document.getElementById("username").value;
     let password = document.getElementById("password").value;
 
+  
+    
     let request = new XMLHttpRequest();
     request.open("POST", "http://localhost:3000/authorize");
     //request.send(new FormData(formElement));
