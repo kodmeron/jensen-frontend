@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jensen frontend</title>
     <link rel="stylesheet" href="main.css">
-    <script type="module" src="https://unpkg.com/friendly-challenge@0.9.0/widget.module.min.js" async defer></script>
-    <script nomodule src="https://unpkg.com/friendly-challenge@0.9.0/widget.min.js" async defer></script>
+
+    <!-- friendCap -->
+    <!-- <script type="module" src="https://unpkg.com/friendly-challenge@0.9.0/widget.module.min.js" async defer></script>
+    <script nomodule src="https://unpkg.com/friendly-challenge@0.9.0/widget.min.js" async defer></script> -->
+    
+    <!-- reCAPTCHA    -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- google sign in -->
     <meta name="google-signin-client_id" content="87614128961-0j0v2a1ul61i478kpbjrsbf48adh0bll.apps.googleusercontent.com">
-    <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
 </head>
@@ -25,16 +33,16 @@
         <div id="password">
            <label>Password:</label>
         <br>
-        <input id="password" type="password" name="password"></input> 
+    <input id="password" type="password" name="password"></input>
         </div>
         <input id="submitBtn" type="submit">
         <div class="g-signin2" id="gSignIn" data-onsuccess="onSignIn"></div>
-        <div class="frc-captcha" id="friendCap" data-sitekey="FCMU1TFUA7B1R8FH"></div>
-        <!-- <div class="g-recaptcha" data-sitekey="6LcYjBoeAAAAADwnU7zYSnYz6JkfBiWon9IfIdH-"></div> -->
+        <!-- <div class="frc-captcha" id="friendCap" data-sitekey="FCMU1TFUA7B1R8FH"></div> -->
+        <div class="g-recaptcha" data-sitekey="6LcYjBoeAAAAADwnU7zYSnYz6JkfBiWon9IfIdH-"></div>
     </form>
     <div class="cookie-container">
         <p>
-            Vi rockar kakor up in this bitch bre, inga <a href="#">knasigheter</a>  haha tryck på accept cookies ba d nice
+            Vi rockar kakor up in this bitch bre, inga <a href="terms.html">knasigheter</a>  haha tryck på accept cookies ba d nice
         </p>
         <button class="cookie-btn">
             Accept cookies
